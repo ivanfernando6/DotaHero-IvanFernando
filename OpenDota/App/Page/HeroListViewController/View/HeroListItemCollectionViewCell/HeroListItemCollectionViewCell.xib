@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HeroListItemCollectionViewCell" customModule="OpenDota" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="178" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="178" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK1-tA-VWR">
+                        <rect key="frame" x="0.0" y="0.0" width="178" height="226"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-CX-vmr" userLabel="ImageViewContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="178" height="104.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-Qs-zR7">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="104.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jBq-Qs-zR7" firstAttribute="top" secondItem="LDA-CX-vmr" secondAttribute="top" id="Ycb-7Z-x4C"/>
+                                    <constraint firstAttribute="width" secondItem="LDA-CX-vmr" secondAttribute="height" multiplier="1.7:1" id="b11-aI-6yu"/>
+                                    <constraint firstAttribute="trailing" secondItem="jBq-Qs-zR7" secondAttribute="trailing" id="pFK-8P-x8n"/>
+                                    <constraint firstItem="jBq-Qs-zR7" firstAttribute="leading" secondItem="LDA-CX-vmr" secondAttribute="leading" id="uPI-Gi-qEd"/>
+                                    <constraint firstAttribute="bottom" secondItem="jBq-Qs-zR7" secondAttribute="bottom" id="x9Y-Ed-Lmn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57j-8h-PXx" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="104.5" width="178" height="75.5"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LJ-fU-jNr">
+                                        <rect key="frame" x="4" y="8" width="4" height="59.5"/>
+                                        <color key="backgroundColor" red="1" green="0.82745098039999998" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="4" id="5ET-v5-K6d"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anti Mage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t0-J8-uyO">
+                                        <rect key="frame" x="12" y="8" width="158" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" red="0.28627450980392155" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-0y-gat" userLabel="AttackView" customClass="MediaLabel" customModule="OpenDota" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="31.5" width="158" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="O7v-SY-hRv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLq-o8-zA3" userLabel="ArmorView" customClass="MediaLabel" customModule="OpenDota" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="51.5" width="158" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="NOX-bX-2Mi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9t0-J8-uyO" firstAttribute="leading" secondItem="4LJ-fU-jNr" secondAttribute="trailing" constant="4" id="2vU-2J-5N0"/>
+                                    <constraint firstItem="4LJ-fU-jNr" firstAttribute="bottom" secondItem="CLq-o8-zA3" secondAttribute="bottom" id="4ka-Ue-8w1"/>
+                                    <constraint firstItem="lcB-0y-gat" firstAttribute="leading" secondItem="9t0-J8-uyO" secondAttribute="leading" id="FVL-Sb-Qoj"/>
+                                    <constraint firstItem="lcB-0y-gat" firstAttribute="top" secondItem="9t0-J8-uyO" secondAttribute="bottom" constant="4" id="Ln2-sq-M7R"/>
+                                    <constraint firstItem="4LJ-fU-jNr" firstAttribute="top" secondItem="9t0-J8-uyO" secondAttribute="top" id="XK1-fq-bQE"/>
+                                    <constraint firstItem="CLq-o8-zA3" firstAttribute="leading" secondItem="lcB-0y-gat" secondAttribute="leading" id="ZXw-r6-M7U"/>
+                                    <constraint firstItem="CLq-o8-zA3" firstAttribute="trailing" secondItem="lcB-0y-gat" secondAttribute="trailing" id="d2F-Qq-qv4"/>
+                                    <constraint firstItem="lcB-0y-gat" firstAttribute="trailing" secondItem="9t0-J8-uyO" secondAttribute="trailing" id="h9u-Nq-Lsi"/>
+                                    <constraint firstAttribute="trailing" secondItem="9t0-J8-uyO" secondAttribute="trailing" constant="8" id="o8V-g7-1ua"/>
+                                    <constraint firstItem="4LJ-fU-jNr" firstAttribute="leading" secondItem="57j-8h-PXx" secondAttribute="leading" constant="4" id="qmy-J0-u3O"/>
+                                    <constraint firstItem="CLq-o8-zA3" firstAttribute="top" secondItem="lcB-0y-gat" secondAttribute="bottom" constant="4" id="vym-Tv-HSN"/>
+                                    <constraint firstAttribute="bottom" secondItem="CLq-o8-zA3" secondAttribute="bottom" constant="8" id="yU5-1k-ZkU"/>
+                                    <constraint firstItem="9t0-J8-uyO" firstAttribute="top" secondItem="57j-8h-PXx" secondAttribute="top" constant="8" id="zIQ-I9-TiA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LDA-CX-vmr" firstAttribute="leading" secondItem="lK1-tA-VWR" secondAttribute="leading" id="4Mi-Tu-Viv"/>
+                            <constraint firstItem="57j-8h-PXx" firstAttribute="leading" secondItem="LDA-CX-vmr" secondAttribute="leading" priority="999" id="C2I-jQ-ywC"/>
+                            <constraint firstItem="LDA-CX-vmr" firstAttribute="top" secondItem="lK1-tA-VWR" secondAttribute="top" priority="999" id="C5k-ge-47w"/>
+                            <constraint firstAttribute="trailing" secondItem="LDA-CX-vmr" secondAttribute="trailing" id="Ps6-1c-edl"/>
+                            <constraint firstItem="LDA-CX-vmr" firstAttribute="trailing" secondItem="57j-8h-PXx" secondAttribute="trailing" id="Yuy-M0-QxH"/>
+                            <constraint firstItem="57j-8h-PXx" firstAttribute="top" secondItem="LDA-CX-vmr" secondAttribute="bottom" id="kzf-0u-Xx3"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="57j-8h-PXx" secondAttribute="bottom" id="p2m-Px-Hcx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lK1-tA-VWR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a4t-ys-ee8"/>
+                <constraint firstAttribute="trailing" secondItem="lK1-tA-VWR" secondAttribute="trailing" id="eYD-8P-Daj"/>
+                <constraint firstItem="lK1-tA-VWR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tTY-Tg-F2F"/>
+                <constraint firstAttribute="bottom" secondItem="lK1-tA-VWR" secondAttribute="bottom" id="uRz-bT-GPf"/>
+            </constraints>
+            <size key="customSize" width="428.5" height="308"/>
+            <connections>
+                <outlet property="baseArmorMediaLabel" destination="CLq-o8-zA3" id="NZe-La-CVd"/>
+                <outlet property="baseAttackMediaLabel" destination="lcB-0y-gat" id="qgg-gC-2oX"/>
+                <outlet property="heroAttributeColorView" destination="4LJ-fU-jNr" id="y1J-7n-Ymr"/>
+                <outlet property="heroImageView" destination="jBq-Qs-zR7" id="qcS-qn-YR0"/>
+                <outlet property="heroNameLabel" destination="9t0-J8-uyO" id="yWa-60-ZQ1"/>
+                <outlet property="textContainerView" destination="57j-8h-PXx" id="2bY-Hm-WD4"/>
+            </connections>
+            <point key="canvasLocation" x="384.05797101449281" y="83.035714285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heroPlaceholder" width="128" height="75.5"/>
+    </resources>
+</document>

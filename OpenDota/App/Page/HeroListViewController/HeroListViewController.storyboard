@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mHm-mn-wEl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero-->
+        <scene sceneID="eKj-Pw-DTe">
+            <objects>
+                <viewController id="evg-e0-Nzb" customClass="HeroListViewController" customModule="OpenDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFO-nC-Arm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvW-Ir-t3o" customClass="PinterestSegment" customModule="PinterestSegment">
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <color key="backgroundColor" red="0.73333333333333328" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pRp-nh-2Tb"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X02-de-2UX">
+                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                                <color key="backgroundColor" red="0.73333333333333328" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="dxc-yF-i3O" customClass="HeroListViewFlowLayout" customModule="OpenDota" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KUx-Jw-JDp">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uaF-Fx-xPA">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB5-HY-QP6" customClass="GeneralErrorView" customModule="OpenDota" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rCa-7u-xdF"/>
+                        <color key="backgroundColor" red="0.73333333333333328" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rCa-7u-xdF" firstAttribute="bottom" secondItem="aB5-HY-QP6" secondAttribute="bottom" id="8L0-uq-tML"/>
+                            <constraint firstItem="rCa-7u-xdF" firstAttribute="trailing" secondItem="X02-de-2UX" secondAttribute="trailing" id="Bo6-7k-ccJ"/>
+                            <constraint firstItem="X02-de-2UX" firstAttribute="leading" secondItem="rCa-7u-xdF" secondAttribute="leading" id="LEd-X2-VJA"/>
+                            <constraint firstItem="aB5-HY-QP6" firstAttribute="leading" secondItem="rCa-7u-xdF" secondAttribute="leading" id="XwW-Wt-TDr"/>
+                            <constraint firstItem="rCa-7u-xdF" firstAttribute="trailing" secondItem="aB5-HY-QP6" secondAttribute="trailing" id="b4z-Rg-s0Q"/>
+                            <constraint firstItem="X02-de-2UX" firstAttribute="top" secondItem="rvW-Ir-t3o" secondAttribute="bottom" id="emD-E8-yTE"/>
+                            <constraint firstItem="rCa-7u-xdF" firstAttribute="trailing" secondItem="rvW-Ir-t3o" secondAttribute="trailing" id="jnS-Q3-dnS"/>
+                            <constraint firstItem="rCa-7u-xdF" firstAttribute="bottom" secondItem="X02-de-2UX" secondAttribute="bottom" id="m5X-4x-T1C"/>
+                            <constraint firstItem="rvW-Ir-t3o" firstAttribute="top" secondItem="rCa-7u-xdF" secondAttribute="top" id="qZY-ZS-FeG"/>
+                            <constraint firstItem="rvW-Ir-t3o" firstAttribute="leading" secondItem="rCa-7u-xdF" secondAttribute="leading" id="tCe-CG-AQy"/>
+                            <constraint firstItem="aB5-HY-QP6" firstAttribute="top" secondItem="rCa-7u-xdF" secondAttribute="top" id="uso-N5-XBv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hero" id="hFy-Sy-CRg"/>
+                    <connections>
+                        <outlet property="collectionView" destination="X02-de-2UX" id="gAx-Dj-Okv"/>
+                        <outlet property="collectionViewFlowLayout" destination="dxc-yF-i3O" id="S2e-Pv-gKj"/>
+                        <outlet property="errorView" destination="aB5-HY-QP6" id="KtG-yr-IXN"/>
+                        <outlet property="segmentControlView" destination="rvW-Ir-t3o" id="1RT-z0-if6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sc-XU-TPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510.144927536232" y="195.53571428571428"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="jaL-9e-zSM">
+            <objects>
+                <navigationController storyboardIdentifier="HeroListViewController" automaticallyAdjustsScrollViewInsets="NO" id="mHm-mn-wEl" customClass="BaseNavigationController" customModule="OpenDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LwV-ad-22N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="evg-e0-Nzb" kind="relationship" relationship="rootViewController" id="MCu-Qm-ijY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Bw-iT-rVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="195.53571428571428"/>
+        </scene>
+    </scenes>
+</document>

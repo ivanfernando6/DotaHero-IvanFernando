@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Piz-BX-rUc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero Detail View Controller-->
+        <scene sceneID="bzw-pK-9Kk">
+            <objects>
+                <viewController id="I0C-FL-84g" customClass="HeroDetailViewController" customModule="OpenDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aph-t7-njU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05L-1a-m5W">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5Q-fD-Hh3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT6-5a-CVS" customClass="HeroDetailInfoView" customModule="OpenDota" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="16" width="382" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" placeholder="YES" id="prp-nf-hlv"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmW-7l-9NI">
+                                                <rect key="frame" x="16" y="144" width="382" height="241"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Heroes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-Tm-q0I">
+                                                        <rect key="frame" x="0.0" y="8" width="382" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                        <color key="textColor" red="0.28627450980392155" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-Pk-VHj">
+                                                        <rect key="frame" x="0.0" y="33" width="382" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" placeholder="YES" id="0iy-AP-aoR"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Ult-Tm-q0I" firstAttribute="leading" secondItem="KmW-7l-9NI" secondAttribute="leading" id="0ZR-3l-yDH"/>
+                                                    <constraint firstItem="JfR-Pk-VHj" firstAttribute="leading" secondItem="Ult-Tm-q0I" secondAttribute="leading" id="Qua-hT-QA0"/>
+                                                    <constraint firstItem="JfR-Pk-VHj" firstAttribute="top" secondItem="Ult-Tm-q0I" secondAttribute="bottom" constant="8" id="SQH-Bn-lWw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ult-Tm-q0I" secondAttribute="trailing" id="Scd-ro-aDe"/>
+                                                    <constraint firstItem="Ult-Tm-q0I" firstAttribute="top" secondItem="KmW-7l-9NI" secondAttribute="top" constant="8" id="WzK-7w-H6Q"/>
+                                                    <constraint firstItem="JfR-Pk-VHj" firstAttribute="trailing" secondItem="Ult-Tm-q0I" secondAttribute="trailing" id="bvn-OC-IAA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JfR-Pk-VHj" secondAttribute="bottom" constant="8" id="spa-4G-WDy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="TT6-5a-CVS" secondAttribute="trailing" constant="16" id="2Ti-0N-T4Q"/>
+                                            <constraint firstItem="TT6-5a-CVS" firstAttribute="leading" secondItem="c5Q-fD-Hh3" secondAttribute="leading" constant="16" id="7VH-NT-2Hv"/>
+                                            <constraint firstItem="KmW-7l-9NI" firstAttribute="top" secondItem="TT6-5a-CVS" secondAttribute="bottom" constant="8" id="OYz-Z9-CxL"/>
+                                            <constraint firstItem="KmW-7l-9NI" firstAttribute="trailing" secondItem="TT6-5a-CVS" secondAttribute="trailing" id="b9W-1L-jTg"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KmW-7l-9NI" secondAttribute="bottom" constant="16" id="dx0-y5-gmm"/>
+                                            <constraint firstItem="TT6-5a-CVS" firstAttribute="top" secondItem="c5Q-fD-Hh3" secondAttribute="top" constant="16" id="fZq-gn-amv"/>
+                                            <constraint firstItem="KmW-7l-9NI" firstAttribute="leading" secondItem="TT6-5a-CVS" secondAttribute="leading" id="kTj-LK-nOc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c5Q-fD-Hh3" firstAttribute="leading" secondItem="05L-1a-m5W" secondAttribute="leading" id="26K-YR-B7x"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5Q-fD-Hh3" secondAttribute="trailing" id="5wI-nN-0Pr"/>
+                                    <constraint firstItem="c5Q-fD-Hh3" firstAttribute="top" secondItem="05L-1a-m5W" secondAttribute="top" id="GmW-OV-wYE"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5Q-fD-Hh3" secondAttribute="bottom" id="kzP-ll-n0A"/>
+                                    <constraint firstItem="c5Q-fD-Hh3" firstAttribute="height" secondItem="05L-1a-m5W" secondAttribute="height" placeholder="YES" id="lIv-kR-Gne"/>
+                                    <constraint firstItem="c5Q-fD-Hh3" firstAttribute="width" secondItem="05L-1a-m5W" secondAttribute="width" id="v3e-n0-oY8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="O22-8Z-eRW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vH6-r0-N1C"/>
+                            </scrollView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GO-ZY-hyI" customClass="GeneralErrorView" customModule="OpenDota" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XBz-FM-z2z"/>
+                        <color key="backgroundColor" red="0.73333333333333328" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="05L-1a-m5W" firstAttribute="leading" secondItem="XBz-FM-z2z" secondAttribute="leading" id="B5r-Dw-wBa"/>
+                            <constraint firstItem="2GO-ZY-hyI" firstAttribute="leading" secondItem="XBz-FM-z2z" secondAttribute="leading" id="XMf-Bo-jnc"/>
+                            <constraint firstItem="XBz-FM-z2z" firstAttribute="trailing" secondItem="2GO-ZY-hyI" secondAttribute="trailing" id="aV6-ZJ-RGj"/>
+                            <constraint firstItem="XBz-FM-z2z" firstAttribute="bottom" secondItem="05L-1a-m5W" secondAttribute="bottom" id="bdd-8G-rYc"/>
+                            <constraint firstItem="XBz-FM-z2z" firstAttribute="trailing" secondItem="05L-1a-m5W" secondAttribute="trailing" id="eTs-9I-U6V"/>
+                            <constraint firstItem="XBz-FM-z2z" firstAttribute="bottom" secondItem="2GO-ZY-hyI" secondAttribute="bottom" id="qAJ-pS-QnQ"/>
+                            <constraint firstItem="2GO-ZY-hyI" firstAttribute="top" secondItem="XBz-FM-z2z" secondAttribute="top" id="uPQ-A3-tzX"/>
+                            <constraint firstItem="05L-1a-m5W" firstAttribute="top" secondItem="XBz-FM-z2z" secondAttribute="top" id="wmk-SA-IB8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aja-l2-gZA"/>
+                    <connections>
+                        <outlet property="generalErrorView" destination="2GO-ZY-hyI" id="tbR-bp-SDF"/>
+                        <outlet property="heroInfoView" destination="TT6-5a-CVS" id="bNQ-7b-19v"/>
+                        <outlet property="otherHeroStackView" destination="JfR-Pk-VHj" id="tOD-Yw-KrD"/>
+                        <outlet property="scrollView" destination="05L-1a-m5W" id="2Vq-I4-bs0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sE-UA-rqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.8985507246377" y="115.84821428571428"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="yEn-J9-DU2">
+            <objects>
+                <navigationController storyboardIdentifier="HeroDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="Piz-BX-rUc" customClass="BaseNavigationController" customModule="OpenDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWu-xC-aHE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I0C-FL-84g" kind="relationship" relationship="rootViewController" id="5fe-gh-EDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwI-TL-XdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

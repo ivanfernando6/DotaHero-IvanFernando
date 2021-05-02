@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaLabel" customModule="OpenDota" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="eGt-Io-HmP" id="C8V-yA-woU"/>
+                <outlet property="textLabel" destination="QfR-Gs-Aoy" id="9vN-2z-mnU"/>
+                <outlet property="wrapperView" destination="hhD-PL-msx" id="gKu-1d-MK8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhD-PL-msx">
+                    <rect key="frame" x="0.0" y="0.0" width="298" height="42"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-Ed-42a">
+                            <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attributePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-Io-HmP">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="v1g-Ed-42a" secondAttribute="height" multiplier="1:1" id="J5G-kk-Up4"/>
+                                <constraint firstAttribute="bottom" secondItem="eGt-Io-HmP" secondAttribute="bottom" id="jyb-Qs-Nr1"/>
+                                <constraint firstItem="eGt-Io-HmP" firstAttribute="top" secondItem="v1g-Ed-42a" secondAttribute="top" id="ll5-3p-ZJg"/>
+                                <constraint firstAttribute="trailing" secondItem="eGt-Io-HmP" secondAttribute="trailing" id="tUn-5d-Upd"/>
+                                <constraint firstItem="eGt-Io-HmP" firstAttribute="leading" secondItem="v1g-Ed-42a" secondAttribute="leading" id="zi5-QS-yC6"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfR-Gs-Aoy">
+                            <rect key="frame" x="46" y="0.0" width="252" height="42"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.28627450980392155" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="v1g-Ed-42a" firstAttribute="top" secondItem="hhD-PL-msx" secondAttribute="top" id="08x-gr-D9Z"/>
+                        <constraint firstAttribute="trailing" secondItem="QfR-Gs-Aoy" secondAttribute="trailing" id="H07-Rb-cIH"/>
+                        <constraint firstAttribute="bottom" secondItem="v1g-Ed-42a" secondAttribute="bottom" id="dYj-US-1Yc"/>
+                        <constraint firstItem="v1g-Ed-42a" firstAttribute="leading" secondItem="hhD-PL-msx" secondAttribute="leading" id="etw-mP-Nj0"/>
+                        <constraint firstItem="QfR-Gs-Aoy" firstAttribute="top" secondItem="v1g-Ed-42a" secondAttribute="top" id="kZQ-RU-gAr"/>
+                        <constraint firstItem="QfR-Gs-Aoy" firstAttribute="centerY" secondItem="v1g-Ed-42a" secondAttribute="centerY" id="lMC-qw-yqp"/>
+                        <constraint firstItem="QfR-Gs-Aoy" firstAttribute="leading" secondItem="v1g-Ed-42a" secondAttribute="trailing" constant="4" id="obc-c5-O09"/>
+                        <constraint firstItem="QfR-Gs-Aoy" firstAttribute="bottom" secondItem="v1g-Ed-42a" secondAttribute="bottom" id="xOk-aH-vub"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hhD-PL-msx" secondAttribute="trailing" id="Nm8-34-5NB"/>
+                <constraint firstItem="hhD-PL-msx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ePv-8l-t4w"/>
+                <constraint firstAttribute="bottom" secondItem="hhD-PL-msx" secondAttribute="bottom" id="oe0-Bl-BrK"/>
+                <constraint firstItem="hhD-PL-msx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t9L-oM-FtO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.43478260869566" y="303.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="attributePlaceholder" width="64" height="64"/>
+    </resources>
+</document>

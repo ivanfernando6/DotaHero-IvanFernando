@@ -1,0 +1,6 @@
+framework module Pods_OpenDotaTests {
+  umbrella header "Pods-OpenDotaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

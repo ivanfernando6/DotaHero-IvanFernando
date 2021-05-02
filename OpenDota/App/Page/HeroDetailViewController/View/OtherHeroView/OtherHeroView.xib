@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtherHeroView" customModule="OpenDota" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="ot7-Zz-c5K" id="REO-5X-rjg"/>
+                <outlet property="heroImageContainerView" destination="FYq-uy-jZM" id="1z5-XA-bu5"/>
+                <outlet property="heroImageView" destination="l61-8K-jeZ" id="0HL-sw-1si"/>
+                <outlet property="heroNameLabel" destination="jtV-1r-jCI" id="DM3-y8-jQ9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="161"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B19-dg-PZc">
+                    <rect key="frame" x="0.0" y="44" width="391" height="80"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYq-uy-jZM" userLabel="imageContainer" customClass="RoundedView" customModule="OpenDota" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="64" height="64"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="l61-8K-jeZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="l61-8K-jeZ" secondAttribute="height" multiplier="1:1" id="xTM-3V-bh1"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="l61-8K-jeZ" firstAttribute="top" secondItem="FYq-uy-jZM" secondAttribute="top" id="LQZ-qK-PRa"/>
+                                <constraint firstAttribute="trailing" secondItem="l61-8K-jeZ" secondAttribute="trailing" id="Q8W-2W-LCe"/>
+                                <constraint firstAttribute="width" constant="64" id="eOp-2J-NgV"/>
+                                <constraint firstAttribute="bottom" secondItem="l61-8K-jeZ" secondAttribute="bottom" id="gUX-Iq-IXy"/>
+                                <constraint firstItem="l61-8K-jeZ" firstAttribute="leading" secondItem="FYq-uy-jZM" secondAttribute="leading" id="tnh-7d-Tb7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN5-Yr-Hd6">
+                            <rect key="frame" x="80" y="8" width="303" height="64"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anti Mage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtV-1r-jCI">
+                                    <rect key="frame" x="0.0" y="22.5" width="78.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="textColor" red="0.28627450980392155" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="jtV-1r-jCI" firstAttribute="leading" secondItem="iN5-Yr-Hd6" secondAttribute="leading" id="QbR-RB-gTR"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot7-Zz-c5K">
+                            <rect key="frame" x="0.0" y="0.0" width="391" height="80"/>
+                            <connections>
+                                <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="cxC-0f-ugZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="FYq-uy-jZM" firstAttribute="leading" secondItem="B19-dg-PZc" secondAttribute="leading" constant="8" id="Aw3-Mu-NWu"/>
+                        <constraint firstAttribute="trailing" secondItem="ot7-Zz-c5K" secondAttribute="trailing" id="KcA-um-mWG"/>
+                        <constraint firstItem="ot7-Zz-c5K" firstAttribute="top" secondItem="B19-dg-PZc" secondAttribute="top" id="Ohi-Qc-Pnz"/>
+                        <constraint firstAttribute="bottom" secondItem="iN5-Yr-Hd6" secondAttribute="bottom" constant="8" id="SNu-4X-zbd"/>
+                        <constraint firstAttribute="bottom" secondItem="FYq-uy-jZM" secondAttribute="bottom" constant="8" id="UmI-if-hSH"/>
+                        <constraint firstItem="FYq-uy-jZM" firstAttribute="top" secondItem="B19-dg-PZc" secondAttribute="top" constant="8" id="a8S-b9-WVn"/>
+                        <constraint firstItem="jtV-1r-jCI" firstAttribute="centerY" secondItem="FYq-uy-jZM" secondAttribute="centerY" id="dua-ap-efW"/>
+                        <constraint firstItem="ot7-Zz-c5K" firstAttribute="leading" secondItem="B19-dg-PZc" secondAttribute="leading" id="eRi-dl-27a"/>
+                        <constraint firstItem="iN5-Yr-Hd6" firstAttribute="leading" secondItem="FYq-uy-jZM" secondAttribute="trailing" constant="8" id="fpv-c0-82d"/>
+                        <constraint firstItem="iN5-Yr-Hd6" firstAttribute="top" secondItem="B19-dg-PZc" secondAttribute="top" constant="8" id="pOo-nk-e6H"/>
+                        <constraint firstAttribute="bottom" secondItem="ot7-Zz-c5K" secondAttribute="bottom" id="sy5-p5-3u3"/>
+                        <constraint firstAttribute="trailing" secondItem="iN5-Yr-Hd6" secondAttribute="trailing" constant="8" id="zTv-8w-ViX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="B19-dg-PZc" secondAttribute="bottom" id="5eP-ko-kXe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="B19-dg-PZc" secondAttribute="trailing" id="Pkx-3u-xeK"/>
+                <constraint firstItem="B19-dg-PZc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xz7-7m-jW9"/>
+                <constraint firstItem="B19-dg-PZc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jcP-DU-yCq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-347.10144927536237" y="-255.46875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heroPlaceholder" width="128" height="75.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
